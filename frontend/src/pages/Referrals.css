@@ -1,0 +1,565 @@
+.referrals-page {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* Referrals Table Directory */
+.table-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.referrals-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.referrals-table th {
+  background: #f8fafc;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.referrals-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.referrals-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.referrals-table tr.selected-row {
+  background-color: #fef2f2;
+}
+
+.ref-code {
+  font-family: monospace;
+  font-weight: 700;
+  color: #0369a1;
+  background: #e0f2fe;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.table-diagnosis {
+  margin: 0;
+  color: #334155;
+  font-size: 0.83rem;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.route-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.dept-tag {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.8rem;
+}
+
+.dest-hosp {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.action-buttons-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-table-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: #fef2f2;
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  border: 1px solid #fecaca;
+}
+
+.btn-table-action:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.btn-table-icon {
+  padding: 0.35rem;
+  color: #64748b;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-table-icon:hover {
+  background: #f1f5f9;
+  color: var(--text-main);
+}
+
+/* Scan Layout */
+.scan-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.scan-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.qr-scanner {
+  background-color: #0f172a;
+  border-radius: var(--radius-md);
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-scanner.scanning-active .scanner-frame {
+  border-color: #22c55e;
+}
+
+.qr-watermark {
+  color: rgba(255, 255, 255, 0.12);
+  margin-bottom: 0.5rem;
+}
+
+.scanner-frame {
+  width: 190px;
+  height: 190px;
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.scanner-frame p {
+  color: #e2e8f0;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4ade80;
+  box-shadow: 0 0 10px #4ade80;
+  animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: 0; }
+  50% { top: 100%; }
+  100% { top: 0; }
+}
+
+.quick-scan-presets {
+  background: #f8fafc;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.preset-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.preset-chip-btn {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: #334155;
+  display: flex;
+  align-items: center;
+}
+
+.preset-chip-btn:hover {
+  background: #fef2f2;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.patient-found-banner {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.patient-found-banner p {
+  font-size: 0.82rem;
+  margin: 0.15rem 0 0 0;
+  color: #dc2626;
+}
+
+.status-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.status-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.status-btn.active {
+  background-color: #fef2f2;
+  border-color: var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Details and Timeline */
+.details-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-left: 2px solid var(--border);
+}
+
+.timeline-item:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.timeline-item .marker {
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--surface);
+  border: 2px solid #cbd5e1;
+}
+
+.timeline-item.completed {
+  border-left-color: var(--primary);
+}
+
+.timeline-item.completed .marker {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.timeline-item.current .marker {
+  border-color: var(--primary);
+  border-width: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(6, 95, 70, 0.2);
+}
+
+.timeline-item .content h4 {
+  margin: 0 0 0.2rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.timeline-item .content .time {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.timeline-item .content .history-note {
+  font-size: 0.8rem;
+  color: #334155;
+  background: #f8fafc;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  margin-top: 0.35rem;
+}
+
+.timeline-item .content .pending-text {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin: 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.info-grid label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.info-grid p {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.avatar-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #991b1b, #dc2626);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.diagnosis-box {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.diagnosis-text {
+  line-height: 1.5;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.attachments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.attachment-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #f8fafc;
+}
+
+.status-dot-mini {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-top: 6px;
+}
+
+.attachment-item h4 {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Printable Passport Slip Modal */
+.print-slip-card {
+  max-width: 650px;
+}
+
+.print-slip-body {
+  padding: 1.5rem 2rem;
+  font-family: inherit;
+}
+
+.slip-official-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.gov-emblem {
+  background: #fef2f2;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+}
+
+.slip-official-header h4 {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: #dc2626;
+}
+
+.slip-official-header h5 {
+  margin: 0.15rem 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.slip-qr-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+}
+
+.slip-ref-code {
+  font-family: monospace;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0369a1;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.slip-section {
+  margin-bottom: 1.25rem;
+}
+
+.slip-section-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.2rem;
+}
+
+.slip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.slip-diagnosis {
+  background: #f8fafc;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.slip-footer-stamp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px dashed #cbd5e1;
+  margin-top: 1rem;
+}
+
+.stamp-text {
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+.stamp-box {
+  border: 2px dashed #ef4444;
+  color: #ef4444;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,133 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #fef2f2, #eff6ff);
+}
+
+.login-card {
+  background-color: var(--surface);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-icon-large {
+  background-color: #e0f2fe;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.login-header h2 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.auth-tabs {
+  display: flex;
+  background-color: #f1f5f9;
+  padding: 0.25rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.auth-tab.active {
+  background-color: var(--surface);
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.login-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.login-form label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.forgot-link {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon .input-icon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+}
+
+.input-with-icon .input-icon-right {
+  position: absolute;
+  right: 1rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.input-with-icon input {
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+}
+
+.login-btn {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.role-detection-box {
+  margin-top: 2rem;
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.role-detection-box h5 {
+  margin: 0 0 0.25rem 0;
+  color: #0369a1;
+  font-size: 0.85rem;
+}
+
+.role-detection-box p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #0c4a6e;
+  line-height: 1.4;
+}

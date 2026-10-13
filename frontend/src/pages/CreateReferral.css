@@ -1,0 +1,218 @@
+.create-referral {
+  width: 100%;
+}
+
+.page-header h2 {
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.form-section {
+  background-color: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.text-red {
+  color: var(--accent-red);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.form-group.span-2 { grid-column: span 2; }
+.form-group.span-4 { grid-column: span 4; }
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.file-drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.file-drop-zone:hover {
+  border-color: var(--primary);
+  background-color: #fef2f2;
+}
+
+.file-drop-zone p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.file-drop-zone span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.bottom-sections {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.flex-1 { flex: 1; }
+
+.urgency-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.urgency-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.urgency-card.active {
+  border-color: var(--primary);
+  background-color: #fef2f2;
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.urgency-card input[type="radio"] {
+  width: auto;
+  margin: 0;
+  accent-color: var(--primary);
+}
+
+.urgency-card strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.urgency-card p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* Attached Files */
+.attached-files-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.file-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 0.35rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  color: #334155;
+}
+
+.remove-file-btn {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+}
+
+.remove-file-btn:hover {
+  color: #ef4444;
+}
+
+.emergency-card.active {
+  border-color: #ef4444 !important;
+  background-color: #fef2f2 !important;
+  box-shadow: 0 0 0 1px #ef4444 !important;
+}
+
+.emergency-card input[type="radio"] {
+  accent-color: #ef4444;
+}
+
+/* Success Confirmation Modal */
+.success-referral-card {
+  max-width: 520px;
+}
+
+.success-passport-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+}
+
+.passport-id-badge {
+  font-family: monospace;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0369a1;
+  background: #e0f2fe;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.route-summary {
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.badge-error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.success-info-tip {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+.success-info-tip p {
+  font-size: 0.8rem;
+  color: #dc2626;
+  margin: 0;
+}
+

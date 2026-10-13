@@ -1,0 +1,471 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.alert-banner {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  align-items: flex-start;
+}
+
+.alert-banner.error {
+  background-color: #fef2f2;
+  border-left: 4px solid #ef4444;
+  color: #991b1b;
+}
+
+.alert-banner.warning {
+  background-color: #fffbeb;
+  border-left: 4px solid #f59e0b;
+  color: #92400e;
+}
+
+.alert-banner p {
+  color: inherit;
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.initiate-card {
+  grid-column: span 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--surface), #fef2f2);
+  border-left: 4px solid var(--primary);
+}
+
+.initiate-card h3 {
+  color: var(--primary);
+}
+
+.trends-card {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.metrics-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stat-box {
+  flex: 1;
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.mock-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 120px;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.bar {
+  background-color: #fecaca;
+  flex: 1;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.5s ease-out;
+}
+
+.bar:nth-child(even) {
+  background-color: var(--primary);
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.chart-labels span {
+  flex: 1;
+  text-align: center;
+}
+
+.dashboard-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Referral Table */
+.referral-table-wrapper {
+  overflow-x: auto;
+}
+
+.referral-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.referral-table thead tr {
+  background-color: var(--primary);
+}
+
+.referral-table thead th {
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.referral-table thead th:first-child {
+  text-align: left;
+  border-radius: 6px 0 0 0;
+}
+
+.referral-table thead th:last-child {
+  border-radius: 0 6px 0 0;
+}
+
+.referral-table tbody tr.referral-row {
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.15s;
+}
+
+.referral-table tbody tr.referral-row:hover {
+  background-color: #fef2f2;
+}
+
+.referral-table tbody tr.referral-row-emergency {
+  border-left: 3px solid #dc2626;
+  background-color: #fff8f8;
+}
+
+.referral-table tbody tr.referral-row-emergency:hover {
+  background-color: #fee2e2;
+}
+
+.referral-table td {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.referral-table td:first-child {
+  text-align: left;
+}
+
+.patient-name {
+  display: block;
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.88rem;
+}
+
+.patient-sub {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.triage-inline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #dc2626;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-bottom: 0.3rem;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-details h4 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.ref-id {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+.activity-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.activity-badges {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.badge {
+  padding: 0.25rem 0;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+}
+
+.badge-referred { background: #dcfce3; color: #166534; }
+.badge-received { background: #ffedd5; color: #c2410c; }
+.badge-seen { background: #e0f2fe; color: #1d4ed8; }
+.badge-closed { background: #e2e8f0; color: #1e293b; }
+
+.time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.text-primary { color: var(--primary); }
+.font-medium { font-weight: 500; }
+
+.followup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.followup-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  border-radius: var(--radius-sm);
+  min-width: 50px;
+  padding: 0.5rem;
+}
+
+.date-box .month {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.date-box .day {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.followup-details h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.followup-details p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Card Improvements */
+.card-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  background: rgba(6, 95, 70, 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.card-subtext {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.trend-stat-chip {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #fef2f2;
+  color: #ef4444;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.clickable-activity {
+  cursor: pointer;
+  padding: 0.85rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.15s;
+}
+
+.clickable-activity:hover {
+  background-color: #f8fafc;
+}
+
+.patient-demographic-tag {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: #f1f5f9;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+.ref-id-badge {
+  font-size: 0.72rem;
+  font-family: monospace;
+  font-weight: 600;
+  color: #0369a1;
+  background: #e0f2fe;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.activity-route {
+  font-size: 0.82rem;
+  color: #334155;
+  margin: 0.2rem 0;
+}
+
+.activity-diagnosis {
+  font-size: 0.78rem;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 420px;
+}
+
+/* Urgency Pills */
+.urgency-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0;
+  border-radius: 4px;
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+}
+
+.urgency-pill-emergency {
+  background-color: #b91c1c;
+  color: #fee2e2;
+  border: 1px solid #f87171;
+  animation: pulseRed 2s infinite;
+}
+
+.urgency-pill-urgent {
+  background-color: #ca8a04;
+  color: #fef9c3;
+  border: 1px solid #facc15;
+}
+
+.urgency-pill-routine {
+  background-color: #15803d;
+  color: #dcfce3;
+}
+
+@keyframes pulseRed {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
+}
+
+
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+/* Calendar Modal Event list */
+.calendar-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.calendar-event-card {
+  padding: 0.85rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.event-time {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.event-content strong {
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.event-content p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
